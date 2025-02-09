@@ -3,19 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>AKCG</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ <!-- TODO: make navigation bar responsive using css -->
+ <!-- TODO: make nav bar sticky -->
     <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+        <nav class="nav-top-bar">
+            <div class="nav-left">
+                <a href="#">
+                    <img src="AKCG_logo.png" alt="Logo" class="nav-logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
+            <div class="nav-right">
+                <a href="#contact" class="btn consult-btn">Pieteikties konsultācijai</a>
+                <select class="language-select">
+                    <option value="lv">Latviešu</option>
+                    <option value="en">English</option>
+                    <option value="ru">Русский</option>
+                </select>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:your-email@example.com">your-email@example.com</a>
+                <a href="tel:+1234567890">+1234567890</a>
+            </div>
         </nav>
     </header>
 
@@ -24,13 +43,13 @@
             <!-- <h2>This is the Hero Section</h2> -->
             <p>MĒS ESAM ŠEIT LAI PALĪDZĒTU JUMS RAST RISINĀJUMUS</p>
             <p>Mūsu misija ir jūsu panākums</p>
-            <button>Sazinies ar mums!</button>
+            <button >Sazinies ar mums!</button>
         </section>
 
         <section id="about">
             <h2>About Us</h2>
             <p>Tell your story, share your mission, and connect with your audience.</p>
-            <img src="balance-scale.jpg" alt="About Us Image">  
+            <img src="balance-scale.jpg" alt="About Us Image" class="scale-img">
         </section>
 
         <section id="services">
@@ -49,34 +68,34 @@
                     <p>Pilna cikla Darba tiesisko attiecību risinājumi.</p>
                 </div>
                 <!-- TODO make second line (set of 3 products) below 1st set of 3 products -->
-                <!-- <div class="service">
+                <div class="service">
                     <h3>Prokūra</h3>
                     <p>Palīdzība uzņēmumu valdēm, mūsdienīgs risinājums uzņēmuma parvaldīšanā.</p>
                 </div>
-                <div class="service">
+                <!-- <div class="service">
                     <h3>Iepirkumu konkursi</h3>
                     <p>Neatkarīgs starpniecības pakalpojums piedaloties iepirkumu konkursos.</p>
-                </div>
+                </div> -->
                 <div class="service">
                     <h3>Darba strīdi un Civiltiesības</h3>
                     <p>Risinājumi Darba devējiem un Darbiniekiem.</p>
-                </div> -->
+                </div>
             </div>
         </section>
 
         <section id="contact">
-            <h2>Contact Us</h2>
+            <h2>Sazinies ar mums</h2>
             <form>
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-                <textarea placeholder="Your Message"></textarea>
-                <button type="submit">Send</button>
+                <input type="text" placeholder="Vārds *">
+                <input type="email" placeholder="E-pasts *">
+                <textarea placeholder="Jūsu komentārs *"></textarea>
+                <button type="submit">Nosūtīt</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 AKCG.EU All rights reserved.</p>
+        <p>&copy; SIA "AKCG?". Visas tiesības aizsargātas.</p>
     </footer>
 </body>
 </html>
