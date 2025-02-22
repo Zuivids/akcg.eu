@@ -235,6 +235,17 @@ color: inherit; /* Inherit color from parent */
 text-decoration: none; /* Remove underlines from links */
 }
 
+.contact-info-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-info-link:hover {
+    color: rgb(238, 79, 0);
+}
+
 #contact form {
     display: flex;
     flex-direction: column;
