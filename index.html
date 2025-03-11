@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,28 +16,22 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#hero">Sākums</a></li>
-                <li><a href="#about">Par mums</a></li>
-                <li><a href="#services">Pakalojumi</a></li>
-                <li><a href="#contact">Kontakti</a></li>
+                <li><a href="#about">Kontakti</a></li>
+                <li><a href="#services">Pakalpojumi</a></li>
             </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <div class="nav-right">
                 <a href="#contact" class="consult-btn">Pieteikties konsultācijai</a>
                 <div class="language-options">
-                  <div class="language-option active" data-lang="lv">LV</div>
-                  <div class="language-option" data-lang="en">ENG</div>
-                  <div class="language-option" data-lang="ru">RU</div>
+                    <div class="language-option active" data-lang="lv">LV</div>
+                    <div class="language-option" data-lang="en">ENG</div>
+                    <div class="language-option" data-lang="ru">RU</div>
                 </div>
             </div>
-            <div class="contact-info">
-                <a href="mailto:info@autokadacg.lv">
-                  <img src="email-icon.png" alt="email" class="nav-contact-icon">
-                  info@autokadacg.lv
-                </a>
-                <a href="tel:+37129495198">
-                  <img src="phone-call-icon.png" alt="phone" class="nav-contact-icon">
-                  +371 29495198
-                </a>
-              </div>
         </nav>
     </header>
 
@@ -50,8 +43,8 @@
         </section>
 
         <section id="about">
-            <h2>Par mums</h2 
-            <p>Esam ar 25 gadu pieredzi šajā jomā</p>
+            <h2>Mūsu kontakti</h2 
+            <p>Mēs esam pieredzējušu un mērķtiecīgu juristu komanda, kuras mērķis ir sniegt saviem klientiem augstākās kvalitātes juridiskos pakalpojumus. Mums ir padziļināta izpratne par tiesību aktiem un pierādīta pieredze, gūstot panākumus dažādos juridiskos jautājumos.</p>
             <div class="image-container">
                 <div class="person">
                     <img src="Ainars.jpg" alt="Ainars Strakis" class="about-image">
@@ -90,23 +83,35 @@
             <h2>Pakalpojumi</h2>
             <div class="service-grid">
                 <div class="service">
+                    <a class="service-img">
+                        <img src="Procuration-services.png" >
+                    </a>
                     <h3>Prokūras pakalpojumi</h3>
                     <p>Nodrošinām prokūras pakalpojumus, kas ietver gan iznomāšanu, gan izīrēšanu. 
                         Mēs palīdzam klientiem orientēties sarežģītajā prokūras procesā, 
                         nodrošinot profesionālu atbalstu un risinājumus.</p>
                 </div>
                 <div class="service">
+                    <a class="service-img">
+                        <img src="Development-of-real-estate-projects.png" >
+                    </a>
                     <h3>Nekustamo īpašumu projektu attīstība</h3>
                     <p>Piedalāmies nekustamo īpašumu projektu attīstībā no iepirkumu procesa līdz uzraudzībai.
                          Mūsu eksperti ir zinoši un pieredzējuši, lai nodrošinātu projektu veiksmīgu īstenošanu.</p>
                 </div>
                 <div class="service">
+                    <a class="service-img">
+                        <img src="Participating-in-auctions.png" >
+                    </a>
                     <h3>Piedalīšanās maksātnespējīgu subjektu mantas izsolēs ārpus ES</h3>
                     <p>Piedalāmies maksātnespējīgu subjektu mantas izsolēs ārpus ES un nodrošinām 
                         atgūto līdzekļu akumulēšanu Latvijas un Eiropas Savienības ekonomikā. 
                         Mūsu mērķis ir maksimāli atgūt līdzekļus klientu interesēs.</p>
                 </div>
                 <div class="service">
+                    <a class="service-img">
+                        <img src="Legal-services.png" >
+                    </a>
                     <h3>Juridiskie pakalpojumi</h3>
                     <p>Sniedzam plaša spektra juridiskos pakalpojumus, kas ietver konsultācijas,
                          pārstāvību tiesā un citus juridiskos pakalpojumus. Mūsu juristi ir augsti kvalificēti
@@ -170,6 +175,9 @@
             document.body.dataset.lang = selectedLang
           });
         });
+        function toggleMenu() {
+            document.querySelector('.nav-right').classList.toggle('active');
+        }
       </script>
 </body>
 </html>
