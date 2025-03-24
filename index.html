@@ -14,17 +14,23 @@
                     <img src="AKCG_logo.png" alt="Logo" class="nav-logo">
                 </a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#hero">Sākums</a></li>
-                <li><a href="#about">Kontakti</a></li>
-                <li><a href="#services">Pakalpojumi</a></li>
-            </ul>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
             <div class="nav-right">
+                <!-- <ul class="nav-links"> -->
+                    <div class="nav-links-div">
+                        <ul class="nav-links">
+                        <li><a href="#hero">Sākums</a></li>
+                        <li><a href="#about">Kontakti</a></li>
+                        <li><a href="#services">Pakalpojumi</a></li>
+                        </ul>
+                    </div>
+
+                <!-- </ul> -->
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            
                 <a href="#contact" class="consult-btn">Pieteikties konsultācijai</a>
                 <div class="language-options">
                     <div class="language-option active" data-lang="lv">LV</div>
@@ -80,7 +86,7 @@
         </section>
 
         <section id="services">
-            <h2>Pakalpojumi</h2>
+            <h2>Mūsu piedāvātie Pakalpojumi</h2>
             <div class="service-grid">
                 <div class="service">
                     <a class="service-img">
@@ -117,41 +123,19 @@
                          pārstāvību tiesā un citus juridiskos pakalpojumus. Mūsu juristi ir augsti kvalificēti
                           un gatavi palīdzēt jebkurā juridiskā jautājumā.</p>
                 </div>
-                <!-- <div class="service">
-                    <h3>Juridiskie pakalpojumi</h3>
-                    <p>Profesionāli juridiskie pakalpojumi un konsultācijas.</p>
-                </div> -->
-                <!-- <div class="service">
-                    <h3>Iepirkumu procedūras un procesi</h3>
-                    <p>Iepirkumi, kā ārpakalpojums.</p>
-                </div> -->
-                <!-- <div class="service">
-                    <h3>Darba tiesiskās attiecības, Darba aizsardzība  un darba organizācija</h3>
-                    <p>Pilna cikla Darba tiesisko attiecību risinājumi.</p>
-                </div> -->
-                <!-- <div class="service">
-                    <h3>Prokūra</h3>
-                    <p>Palīdzība uzņēmumu valdēm, mūsdienīgs risinājums uzņēmuma parvaldīšanā.</p>
-                </div> -->
-                <!-- <div class="service">
-                    <h3>Iepirkumu konkursi</h3>
-                    <p>Neatkarīgs starpniecības pakalpojums piedaloties iepirkumu konkursos.</p>
-                </div> -->
-                <!-- <div class="service">
-                    <h3>Darba strīdi un Civiltiesības</h3>
-                    <p>Risinājumi Darba devējiem un Darbiniekiem.</p>
-                </div> -->
             </div>
         </section>
 
         <section id="contact">
             <h2>Sazinies ar mums</h2>
-            <form>
-                <input type="text" placeholder="Vārds *">
-                <input type="email" placeholder="E-pasts *">
-                <textarea placeholder="Jūsu komentārs *"></textarea>
-                <button type="submit">Nosūtīt</button>
-            </form>
+            <div class="contact-div">
+                <form>
+                    <input type="text" placeholder="Vārds *" class="text">
+                    <input type="email" placeholder="E-pasts *" class="text">
+                    <textarea placeholder="Jūsu komentārs *" class="textarea"></textarea>
+                    <button type="submit">Nosūtīt</button>
+                </form>
+            </div>
         </section>
     </main>
 

@@ -7,7 +7,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333; /* Dark gray text */
-    background: linear-gradient(0deg, #001d7c, #f0f0f0); /* Smooth radiant effect */
+    background: linear-gradient(0deg, #001d7c, #f0f0f0);
 }
 
 
@@ -24,18 +24,27 @@ z-index: 1000;
 }
 
 /* Logo */
-.nav-left img {
-height: 100px;
-width: auto;
-padding-left: 40%;
+.nav-logo {
+    max-width: 10vw;
+    max-height: 40vh;
+    padding-left: 20%;
 }
 
 /* Navigation Links */
-.nav-links {
-list-style: none;
-display: flex;
-gap: 25px;
+.nav-right {
+    min-width: 900px;
+    padding-right: 10%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
+
+.nav-links-div {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
 .nav-contact-icon {
     height: 20px;
     width: 20px;
@@ -60,12 +69,6 @@ color: #fff;
 }
 
 /* Right Section */
-.nav-right {
-display: flex;
-align-items: center;
-gap: 15px;
-}
-
 .consult-btn {
 background-color: #ff5733;
 color: white;
@@ -84,31 +87,30 @@ cursor: pointer;
 
 .language-options {
     display: flex;
-    flex-direction: row; /* Stack language options vertically */
+    flex-direction: row;
+    padding-left: 15%;
 }
 
 .language-option {
     padding: 5px 10px; 
-    /* padding: 2px 2px; */
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: small;
     cursor: pointer;
-    background-color: white; /* Default background color */
-    /* margin-bottom: 5px; Spacing between options */
+    background-color: white;
     margin-left: 3px;
     margin-right: 3px;
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease;
 }
 
 .language-option.active {
-    background-color: rgb(1, 10, 140); /* Orange background for selected option */
+    background-color: rgb(1, 10, 140);
     color: white;
     
 }
 
 .language-option:hover {
-    background-color: lightgray; /* Highlight on hover (optional) */
+    background-color: lightgray;
 }
 
 .language-select {
@@ -141,69 +143,33 @@ cursor: pointer;
     color: rgb(1, 10, 140); 
 }
 
-/*
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
 
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    margin: 5px 0;
-    transition: 0.3s;
-}
-
-@media (max-width: 1200px) {
-    .nav-left img {
-        height: 65px;
-        width: auto;
-    }
-
-    .nav-links {
-        list-style: none;
+@media screen and (max-width: 1030px) {
+    
+    /* TODO burger menu */
+    .nav-right {
+        padding-right: 5%;
         display: flex;
+        align-items: center;
         gap: 15px;
     }
 
-    .consult-btn {
-        background-color: #ff5733;
-        color: white;
-        padding: 5px 8px;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 5px;
-        transition: 0.3s;
-        border: none;
-        cursor: pointer;
+    .language-options {
+        display: flex;
+        flex-direction: row;
+        padding-left: 5%;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .nav-right {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        background: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 200px;
-        padding: 10px;
-    }
 
-    .nav-right.active {
-        display: flex;
-    }
 
-    .menu-toggle {
-        display: flex;
-    }
-}
 
-*/
+
+
+
+
+
+
 main {
     padding: 2rem;
 }
@@ -288,6 +254,15 @@ cursor: pointer;
 border-radius: 50%; /* Make images circular */
 }
 
+.contact-info-link {
+    text-decoration: none;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info-link:hover {
+    color: rgb(238, 79, 0);
+}
 .about-image:hover {
 transform: scale(1.1);
 box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
@@ -313,28 +288,38 @@ color: inherit; /* Inherit color from parent */
 text-decoration: none; /* Remove underlines from links */
 }
 
-.contact-info-link {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.contact-info-link:hover {
-    color: rgb(238, 79, 0);
+.contact-div {
+    background-color: #ffffff;
+    flex-direction: column;
+    max-width: 600px;
+    min-height: 400px;
+    padding: 2%;
+    margin: 0 auto;
 }
 
 #contact form {
     display: flex;
     flex-direction: column;
+    
 }
 
-#contact input,
-#contact textarea {
+.text {
     margin-bottom: 1rem;
     padding: 0.8rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    max-width: 90%;
+}
+
+.textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 90%;
+    width: 90%;
+    height: 200px;
+    min-height: 100px;
 }
 
 #contact button {
@@ -349,17 +334,10 @@ text-decoration: none; /* Remove underlines from links */
 }
 
 footer {
-    background: linear-gradient(0deg, #001d7c, #0905e9); /* Smooth radiant effect */
+    background: linear-gradient( #f0f0f0);
     color: #fff;
     font-weight: bold;
     text-align: center;
     padding: 1rem 0;
-    position: relative; /* Stick footer to the bottom */
-    width: 100%;
     bottom: 0;
-}
-
-.scale-img {
-    width: 40%;
-    height: 40%;
 }
