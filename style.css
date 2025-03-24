@@ -10,7 +10,6 @@ body {
     background: linear-gradient(0deg, #001d7c, #f0f0f0);
 }
 
-
 /* Navigation Bar */
 .nav-top-bar {
 top: 0;
@@ -223,13 +222,13 @@ section {
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto;
-  }
-  
-  .service-img img {
+}
+
+.service-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
   
 
 .image-container {
