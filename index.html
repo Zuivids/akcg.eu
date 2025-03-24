@@ -18,9 +18,9 @@
                 <!-- <ul class="nav-links"> -->
                     <div class="nav-links-div">
                         <ul class="nav-links">
-                        <li><a href="#hero">Sākums</a></li>
-                        <li><a href="#about">Kontakti</a></li>
-                        <li><a href="#services">Pakalpojumi</a></li>
+                        <li><a href="#hero" data-i18n="home">Sākums</a></li>
+                        <li><a href="#about" data-i18n="contacts">Kontakti</a></li>
+                        <li><a href="#services" data-i18n="services">Pakalpojumi</a></li>
                         </ul>
                     </div>
 
@@ -31,7 +31,7 @@
                     <div class="bar"></div>
                 </div>
             
-                <a href="#contact" class="consult-btn">Pieteikties konsultācijai</a>
+                <a href="#contact" class="consult-btn" data-i18n="consultation">Pieteikties konsultācijai</a>
                 <div class="language-options">
                     <div class="language-option active" data-lang="lv">LV</div>
                     <div class="language-option" data-lang="en">ENG</div>
@@ -149,23 +149,65 @@
 
     <script>
         // TODO change website language when pressed
-        const langOptions = document.querySelectorAll('.language-option');
-      
-        langOptions.forEach(option => {
-          option.addEventListener('click', () => {
+        const translations = {
+        lv: {
+            home: 'Sākums',
+            contacts: 'Kontakti',
+            services: 'Pakalpojumi',
+            consultation: 'Pieteikties konsultācijai',
+            contactUs: 'Sazinies ar mums',
+            allRightsReserved: 'Visas tiesības aizsargātas.'
+            // ... citi tulkojumi ...
+        },
+        en: {
+            home: 'Home',
+            contacts: 'Contacts',
+            services: 'Services',
+            consultation: 'Request a consultation',
+            contactUs: 'Contact Us',
+            allRightsReserved: 'All rights reserved.'
+            // ... citi tulkojumi ...
+        },
+        ru: {
+            home: 'Начало',
+            contacts: 'Контакты',
+            services: 'Услуги',
+            consultation: 'Записаться на консультацию',
+            contactUs: 'Свяжитесь с нами',
+            allRightsReserved: 'Все права защищены.'
+            // ... citi tulkojumi ...
+        }
+    };
 
+    const langOptions = document.querySelectorAll('.language-option');
+    const translatableElements = document.querySelectorAll('[data-i18n]');
+
+    function translatePage(lang) {
+        translatableElements.forEach(element => {
+            const key = element.dataset.i18n;
+            if (translations[lang] && translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
+    }
+
+    langOptions.forEach(option => {
+        option.addEventListener('click', () => {
             langOptions.forEach(opt => opt.classList.remove('active'));
-      
             option.classList.add('active');
             const selectedLang = option.dataset.lang;
             console.log("Selected Language:", selectedLang);
-      
-            document.body.dataset.lang = selectedLang
-          });
+            document.body.dataset.lang = selectedLang;
+            translatePage(selectedLang);
         });
-        function toggleMenu() {
-            document.querySelector('.nav-right').classList.toggle('active');
-        }
+    });
+
+    // Pēc lapas ielādes tulkojiet lapu uz noklusējuma valodu (LV)
+    translatePage('lv');
+
+    function toggleMenu() {
+        document.querySelector('.nav-right').classList.toggle('active');
+    }
       </script>
 </body>
 </html>
