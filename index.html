@@ -150,7 +150,6 @@
     </footer>
 
     <script>
-        // TODO change website language when pressed
         const translations = {
         lv: {
             home: 'Sākums',
@@ -254,6 +253,13 @@
                 element.textContent = translations[lang][key];
             }
         });
+
+        const consultBtn = document.querySelector('.consult-btn');
+        if (lang === 'ru') {
+            consultBtn.classList.add('consult-btn-ru');  // Add a specific class for Russian
+        } else {
+            consultBtn.classList.remove('consult-btn-ru');  // Remove the class for other languages
+        }
     }
 
     langOptions.forEach(option => {
