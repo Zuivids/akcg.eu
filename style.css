@@ -11,6 +11,10 @@ body {
     padding-top: 20vh;
 }
 
+section {
+    scroll-margin-top: 20vh;
+}
+
 /* Navigation Bar */
 .nav-top-bar {
     position: fixed;
@@ -336,7 +340,7 @@ text-decoration: none;
 }
 
 #contact button {
-    background-color: #007bff;
+    background-color:  #ff5733;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -344,6 +348,11 @@ text-decoration: none;
     cursor: pointer;
     width: 35%;
     align-self: center;
+    font-weight: bold;
+}
+
+#contact button:hover {
+    background-color: #e0482d;
 }
 
 footer {

@@ -15,7 +15,6 @@
                 </a>
             </div>
             <div class="nav-right">
-                <!-- <ul class="nav-links"> -->
                     <div class="nav-links-div">
                         <ul class="nav-links">
                         <li><a href="#hero" data-i18n="home">Sākums</a></li>
@@ -24,7 +23,7 @@
                         </ul>
                     </div>
 
-                <!-- </ul> -->
+                    <!-- TODO -->
                 <div class="menu-toggle" onclick="toggleMenu()">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -90,14 +89,14 @@
         </section>
 
         <section id="services">
-            <h2>Mūsu piedāvātie Pakalpojumi</h2>
+            <h2 data-i18n="serviceText1">Mūsu piedāvātie Pakalpojumi</h2>
             <div class="service-grid">
                 <div class="service">
                     <a class="service-img">
                         <img src="Procuration-services.png" >
                     </a>
-                    <h3>Prokūras pakalpojumi</h3>
-                    <p>Nodrošinām prokūras pakalpojumus, kas ietver gan iznomāšanu, gan izīrēšanu. 
+                    <h3 data-i18n="serviceText2">Prokūras pakalpojumi</h3>
+                    <p data-i18n="serviceText3">Nodrošinām prokūras pakalpojumus, kas ietver gan iznomāšanu, gan izīrēšanu. 
                         Mēs palīdzam klientiem orientēties sarežģītajā prokūras procesā, 
                         nodrošinot profesionālu atbalstu un risinājumus.</p>
                 </div>
@@ -105,16 +104,16 @@
                     <a class="service-img">
                         <img src="Development-of-real-estate-projects.png" >
                     </a>
-                    <h3>Nekustamo īpašumu projektu attīstība</h3>
-                    <p>Piedalāmies nekustamo īpašumu projektu attīstībā no iepirkumu procesa līdz uzraudzībai.
+                    <h3 data-i18n="serviceText4">Nekustamo īpašumu projektu attīstība</h3>
+                    <p data-i18n="serviceText5">Piedalāmies nekustamo īpašumu projektu attīstībā no iepirkumu procesa līdz uzraudzībai.
                          Mūsu eksperti ir zinoši un pieredzējuši, lai nodrošinātu projektu veiksmīgu īstenošanu.</p>
                 </div>
                 <div class="service">
                     <a class="service-img">
                         <img src="Participating-in-auctions.png" >
                     </a>
-                    <h3>Piedalīšanās maksātnespējīgu subjektu mantas izsolēs ārpus ES</h3>
-                    <p>Piedalāmies maksātnespējīgu subjektu mantas izsolēs ārpus ES un nodrošinām 
+                    <h3 data-i18n="serviceText6">Piedalīšanās maksātnespējīgu subjektu mantas izsolēs ārpus ES</h3>
+                    <p data-i18n="serviceText7">Piedalāmies maksātnespējīgu subjektu mantas izsolēs ārpus ES un nodrošinām 
                         atgūto līdzekļu akumulēšanu Latvijas un Eiropas Savienības ekonomikā. 
                         Mūsu mērķis ir maksimāli atgūt līdzekļus klientu interesēs.</p>
                 </div>
@@ -122,8 +121,8 @@
                     <a class="service-img">
                         <img src="Legal-services.png" >
                     </a>
-                    <h3>Juridiskie pakalpojumi</h3>
-                    <p>Sniedzam plaša spektra juridiskos pakalpojumus, kas ietver konsultācijas,
+                    <h3 data-i18n="serviceText8">Juridiskie pakalpojumi</h3>
+                    <p data-i18n="serviceText9">Sniedzam plaša spektra juridiskos pakalpojumus, kas ietver konsultācijas,
                          pārstāvību tiesā un citus juridiskos pakalpojumus. Mūsu juristi ir augsti kvalificēti
                           un gatavi palīdzēt jebkurā juridiskā jautājumā.</p>
                 </div>
@@ -131,20 +130,23 @@
         </section>
 
         <section id="contact">
-            <h2>Sazinies ar mums</h2>
+            <h2 data-i18n="contactText1">Sazinies ar mums</h2>
             <div class="contact-div">
                 <form>
-                    <input type="text" placeholder="Vārds *" class="text">
-                    <input type="email" placeholder="E-pasts *" class="text">
-                    <textarea placeholder="Jūsu komentārs *" class="textarea"></textarea>
-                    <button type="submit">Nosūtīt</button>
+                    <input data-i18n="contactText2" type="text" placeholder ="Vārds *" class="text">
+                    <input  data-i18n="contactText3" type="email" placeholder="E-pasts *" class="text">
+                    <textarea data-i18n="contactText4" class="textarea"
+                        onfocus="if(this.value==='Jūsu komentārs *'){this.value='';}"
+                        onblur="if(this.value===''){this.value='Jūsu komentārs *';}">Jūsu komentārs *
+                    </textarea>
+                    <button  data-i18n="contactText5" type="submit">Nosūtīt</button>
                 </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; SIA "AKCG" Visas tiesības aizsargātas.</p>
+        <p data-i18n="footerText1">© SIA "AKCG" Visas tiesības aizsargātas.</p>
     </footer>
 
     <script>
@@ -163,8 +165,22 @@
             aboutText1: 'Mūsu kontakti',
             aboutText2: 'Mēs esam pieredzējušu un mērķtiecīgu juristu komanda, kuras mērķis ir sniegt saviem klientiem augstākās kvalitātes juridiskos pakalpojumus. Mums ir padziļināta izpratne par tiesību aktiem un pierādīta pieredze, gūstot panākumus dažādos juridiskos jautājumos.',
             aboutText3: 'Likumīga un precīza likumu piemērošana',
-            aboutText4: 'Efektīva iepirkumu procedūra un veiksmīga sadarbība'
-            // ... citi tulkojumi ...
+            aboutText4: 'Efektīva iepirkumu procedūra un veiksmīga sadarbība',
+            serviceText1: 'Mūsu piedāvātie Pakalpojumi',
+            serviceText2: 'Prokūras pakalpojumi',
+            serviceText3: 'Nodrošinām prokūras pakalpojumus, kas ietver gan iznomāšanu, gan izīrēšanu. Mēs palīdzam klientiem orientēties sarežģītajā prokūras procesā, nodrošinot profesionālu atbalstu un risinājumus.',
+            serviceText4: 'Nekustamo īpašumu projektu attīstība',
+            serviceText5: 'Piedalāmies nekustamo īpašumu projektu attīstībā no iepirkumu procesa līdz uzraudzībai. Mūsu eksperti ir zinoši un pieredzējuši, lai nodrošinātu projektu veiksmīgu īstenošanu.',
+            serviceText6: 'Piedalīšanās maksātnespējīgu subjektu mantas izsolēs ārpus ES',
+            serviceText7: 'Piedalāmies maksātnespējīgu subjektu mantas izsolēs ārpus ES un nodrošinām atgūto līdzekļu akumulēšanu Latvijas un Eiropas Savienības ekonomikā. Mūsu mērķis ir maksimāli atgūt līdzekļus klientu interesēs.',
+            serviceText8: 'Juridiskie pakalpojumi',
+            serviceText9: 'Sniedzam plaša spektra juridiskos pakalpojumus, kas ietver konsultācijas, pārstāvību tiesā un citus juridiskos pakalpojumus. Mūsu juristi ir augsti kvalificēti un gatavi palīdzēt jebkurā juridiskā jautājumā.',
+            contactText1: 'Sazinies ar mums',
+            contactText2: 'Vārds *',
+            contactText3: 'E-pasts *',
+            contactText4: 'Jūsu komentārs *',
+            contactText5: 'Nosūtīt',
+            footerText1: '© SIA "AKCG" Visas tiesības aizsargātas.'
         },
         en: {
             home: 'Home',
@@ -179,8 +195,22 @@
             aboutText1: 'Our Contacts',
             aboutText2: 'We are a team of experienced and dedicated lawyers committed to providing our clients with top-quality legal services. We have an in-depth understanding of legislation and a proven track record of success in various legal matters.',
             aboutText3: 'Lawful and accurate application of laws',
-            aboutText4: 'Efficient procurement process and successful cooperation'
-            // ... citi tulkojumi ...
+            aboutText4: 'Efficient procurement process and successful cooperation',
+            serviceText1: 'Our Offered Services',
+            serviceText2: 'Procuration Services',
+            serviceText3: 'We provide procuration services, including both leasing and renting. We help clients navigate the complex procuration process, providing professional support and solutions.',
+            serviceText4: 'Real Estate Project Development',
+            serviceText5: 'We participate in real estate project development from the procurement process to supervision. Our experts are knowledgeable and experienced to ensure successful project implementation.',
+            serviceText6: 'Participation in Insolvency Estate Auctions Outside the EU',
+            serviceText7: 'We participate in insolvency estate auctions outside the EU and ensure the accumulation of recovered funds into the Latvian and European Union economy. Our goal is to maximize the recovery of funds in the clients\' interests.',
+            serviceText8: 'Legal Services',
+            serviceText9: 'We provide a wide range of legal services, including consultations, court representation, and other legal services. Our lawyers are highly qualified and ready to assist with any legal matter.',
+            contactText1: 'Contact Us',
+            contactText2: 'Name *',
+            contactText3: 'Email *',
+            contactText4: 'Your Comment *',
+            contactText5: 'Send',
+            footerText1: '© SIA "AKCG" All rights reserved.'
         },
         ru: {
             home: 'Начало',
@@ -195,8 +225,22 @@
             aboutText1: 'Наши контакты',
             aboutText2: 'Мы - команда опытных и целеустремленных юристов, стремящихся предоставлять нашим клиентам юридические услуги высочайшего качества. У нас есть глубокое понимание законодательства и подтвержденный опыт успешного решения различных юридических вопросов.',
             aboutText3: 'Законное и точное применение законов',
-            aboutText4: 'Эффективный процесс закупок и успешное сотрудничество'
-            // ... citi tulkojumi ...
+            aboutText4: 'Эффективный процесс закупок и успешное сотрудничество',
+            serviceText1: 'Наши предлагаемые услуги',
+            serviceText2: 'Услуги прокурации',
+            serviceText3: 'Мы предоставляем услуги прокурации, включая как аренду, так и сдачу в аренду. Мы помогаем клиентам ориентироваться в сложном процессе прокурации, предоставляя профессиональную поддержку и решения.',
+            serviceText4: 'Развитие проектов недвижимости',
+            serviceText5: 'Мы участвуем в развитии проектов недвижимости от процесса закупок до надзора. Наши эксперты обладают знаниями и опытом, чтобы обеспечить успешную реализацию проектов.',
+            serviceText6: 'Участие в аукционах имущества неплатежеспособных субъектов за пределами ЕС',
+            serviceText7: 'Мы участвуем в аукционах имущества неплатежеспособных субъектов за пределами ЕС и обеспечиваем аккумулирование возвращенных средств в экономику Латвии и Европейского Союза. Наша цель - максимально вернуть средства в интересах клиентов.',
+            serviceText8: 'Юридические услуги',
+            serviceText9: 'Мы предоставляем широкий спектр юридических услуг, включая консультации, представительство в суде и другие юридические услуги. Наши юристы высококвалифицированы и готовы помочь в любом юридическом вопросе.',
+            contactText1: 'Свяжитесь с нами',
+            contactText2: 'Имя *',
+            contactText3: 'Электронная почта *',
+            contactText4: 'Ваш комментарий *',
+            contactText5: 'Отправить',
+            footerText1: '© ООО "AKCG" Все права защищены.'
         }
     };
 
