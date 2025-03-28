@@ -24,19 +24,21 @@
                     </div>
 
                     <!-- TODO -->
+                <a href="#contact" class="consult-btn" data-i18n="consultation">Pieteikties konsultācijai</a>
                 <div class="menu-toggle" onclick="toggleMenu()">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
                 </div>
-            
-                <a href="#contact" class="consult-btn" data-i18n="consultation">Pieteikties konsultācijai</a>
+                <div id="menu-fields" style="display: none;">
+                </div>
                 <div class="language-options">
                     <div class="language-option active" data-lang="lv">LV</div>
                     <div class="language-option" data-lang="en">ENG</div>
                     <div class="language-option" data-lang="ru">RU</div>
                 </div>
             </div>
+
         </nav>
     </header>
 
@@ -277,8 +279,14 @@
     translatePage('lv');
 
     function toggleMenu() {
-        document.querySelector('.nav-right').classList.toggle('active');
+        const menuToggle = document.querySelector('.menu-toggle');
+
+        menuToggle.classList.toggle('active');
+
+        document.addEventListener('click', function(event) {
+            event.target.classList.add('active');
+        });
     }
-      </script>
+    </script>
 </body>
 </html>
