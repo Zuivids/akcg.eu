@@ -137,11 +137,9 @@
                 <form action="https://formsubmit.co/martins.zaimis@gmail.com" method="POST">
                     <input data-i18n="contactText2" type="text" placeholder ="Vārds *" class="text" name="name" required>
                     <input  data-i18n="contactText3" type="email" placeholder="E-pasts *" class="text" name="email" required>
-                    <textarea data-i18n="contactText4" class="textarea" type="text" name = "text"
-                        onfocus="if(this.value==='Jūsu komentārs *'){this.value='';}"
-                        onblur="if(this.value===''){this.value='Jūsu komentārs *';}" >Jūsu komentārs *
-                    </textarea>
-                    <button  data-i18n="contactText5" type="submit">Nosūtīt</button>
+                    <input  data-i18n="contactText4" type="phone" placeholder="Telefons *" class="text" name="phone" required>
+                    <textarea data-i18n="contactText5" class="textarea" type="text" name = "text"></textarea>
+                    <button  data-i18n="contactText6" type="submit">Nosūtīt</button>
                 </form>
             </div>
         </section>
@@ -179,8 +177,9 @@
             contactText1: 'Sazinies ar mums',
             contactText2: 'Vārds *',
             contactText3: 'E-pasts *',
-            contactText4: 'Jūsu komentārs *',
-            contactText5: 'Nosūtīt',
+            contactText4: 'Telefons *',
+            contactText5: 'Jūsu komentārs *',
+            contactText6: 'Nosūtīt',
             footerText1: '© SIA "AKCG" Visas tiesības aizsargātas.'
         },
         en: {
@@ -209,8 +208,9 @@
             contactText1: 'Contact Us',
             contactText2: 'Name *',
             contactText3: 'Email *',
-            contactText4: 'Your Comment *',
-            contactText5: 'Send',
+            contactText4: 'Telefons *',
+            contactText5: 'Your Comment *',
+            contactText6: 'Send',
             footerText1: '© SIA "AKCG" All rights reserved.'
         },
         ru: {
@@ -239,8 +239,9 @@
             contactText1: 'Свяжитесь с нами',
             contactText2: 'Имя *',
             contactText3: 'Электронная почта *',
-            contactText4: 'Ваш комментарий *',
-            contactText5: 'Отправить',
+            contactText4: 'Телефон *',
+            contactText5: 'Ваш комментарий *',
+            contactText6: 'Отправить',
             footerText1: '© ООО "AKCG" Все права защищены.'
         }
     };
@@ -249,20 +250,24 @@
     const translatableElements = document.querySelectorAll('[data-i18n]');
 
     function translatePage(lang) {
-        translatableElements.forEach(element => {
-            const key = element.dataset.i18n;
-            if (translations[lang] && translations[lang][key]) {
+    translatableElements.forEach(element => {
+        const key = element.dataset.i18n;
+        if (translations[lang] && translations[lang][key]) {
+            if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+                element.placeholder = translations[lang][key];
+            } else {
                 element.textContent = translations[lang][key];
             }
-        });
+        }
 
         const consultBtn = document.querySelector('.consult-btn');
         if (lang === 'ru') {
-            consultBtn.classList.add('consult-btn-ru');  // Add a specific class for Russian
+            consultBtn.classList.add('consult-btn-ru');
         } else {
-            consultBtn.classList.remove('consult-btn-ru');  // Remove the class for other languages
+            consultBtn.classList.remove('consult-btn-ru');
         }
-    }
+    });
+}
 
     langOptions.forEach(option => {
         option.addEventListener('click', () => {
@@ -275,7 +280,6 @@
         });
     });
 
-    // Pēc lapas ielādes tulkojiet lapu uz noklusējuma valodu (LV)
     translatePage('lv');
 
     function toggleMenu() {
