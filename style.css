@@ -1,4 +1,3 @@
-/* style.css */
 
 body {
     height: 100%;
@@ -177,29 +176,39 @@ section {
 }
 
 .menu-toggle {
-    /* display: inline-block; Or block, depending on your layout */
     display: none;
   }
+
+.menu-fields {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 10%;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000; 
+}
 
 @media screen and (max-width: 1030px) {
     
     .menu-toggle {
-        /* display: inline-block; Or block, depending on your layout */
         display: block;
         cursor: pointer;
-        padding: 10px; /* Adjust padding as needed */
+        padding: 10px;
       }
       
       .menu-toggle .bar {
-        width: 30px; /* Adjust width as needed */
-        height: 4px; /* Adjust height as needed */
-        background-color: #333; /* Adjust color as needed */
-        margin: 6px 0; /* Adjust margin as needed */
-        transition: 0.4s; /* Add transition for smooth animation */
+        width: 30px;
+        height: 4px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
       }
       
       .menu-toggle.active .bar:nth-child(1) {
-        transform: translateY(10px) rotate(45deg); /* Adjust translateY based on bar height and margin */
+        transform: translateY(10px) rotate(45deg);
       }
       
       .menu-toggle.active .bar:nth-child(2) {
@@ -207,17 +216,15 @@ section {
       }
       
       .menu-toggle.active .bar:nth-child(3) {
-        transform: translateY(-10px) rotate(-45deg); /* Adjust translateY based on bar height and margin */
+        transform: translateY(-10px) rotate(-45deg);
       }
       
       #menu-fields {
-        position: flex; /* Or fixed, depending on your layout */
-        top: 60px; /* Adjust as needed */
-        left: 10px; /* Adjust as needed */
-        background-color: #f0f0f0;
-        padding: 20px;
-        border: 1px solid #ccc;
-        z-index: 1000; /* Ensure it's above other elements */
+        display: flex;
+        flex-direction: row;
+        padding-left: 15%;
+        margin: auto;
+        max-width: 20%;;
       }
       
       .menu-field {
@@ -239,7 +246,7 @@ section {
         gap: 15px;
     }
 
-    .language-options {
+    .visible-options{
         display: none;
     }
 

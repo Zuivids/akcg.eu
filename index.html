@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="resource/favicon.ico">
     <title>AKCG</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,7 +11,7 @@
         <nav class="nav-top-bar">
             <div class="nav-left">
                 <a href="#">
-                    <img src="AKCG_logo.png" alt="Logo" class="nav-logo">
+                    <img src="resource/AKCG_logo.png" alt="Logo" class="nav-logo">
                 </a>
             </div>
             <div class="nav-right">
@@ -23,19 +23,23 @@
                         </ul>
                     </div>
 
-                    <!-- TODO -->
                 <a href="#contact" class="consult-btn" data-i18n="consultation">Pieteikties konsultācijai</a>
                 <div class="menu-toggle" onclick="toggleMenu()">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
                 </div>
-                <div id="menu-fields" style="display: none;">
-                </div>
-                <div class="language-options">
+                <div class="menu-fields">
                     <div class="language-option active" data-lang="lv">LV</div>
                     <div class="language-option" data-lang="en">ENG</div>
                     <div class="language-option" data-lang="ru">RU</div>
+                </div>
+                <div class="visible-options">
+                    <div class="language-options">
+                        <div class="language-option active" data-lang="lv">LV</div>
+                        <div class="language-option" data-lang="en">ENG</div>
+                        <div class="language-option" data-lang="ru">RU</div>
+                    </div>
                 </div>
             </div>
 
@@ -58,30 +62,30 @@
             </div> 
             <div class="image-container">
                 <div class="person">
-                    <img src="Ainars.jpg" alt="Ainars Strakis" class="about-image">
+                    <img src="resource/Ainars.jpg" alt="Ainars Strakis" class="about-image">
                     <div class="caption">  
                         <h3>Ainārs Strāķis</h3>  
                         <a href="mailto:ainars.strakis@autokadacg.lv" class="contact-info-link">
-                            <img src="email-icon.png" alt="email" class="nav-contact-icon">
+                            <img src="resource/email-icon.png" alt="email" class="nav-contact-icon">
                             ainars.strakis@autokadacg.lv
                         </a>
                         <a href="tel:+371 29495198" class="contact-info-link">
-                            <img src="phone-call-icon.png" alt="phone" class="nav-contact-icon">
+                            <img src="resource/phone-call-icon.png" alt="phone" class="nav-contact-icon">
                             +371 29495198
                         </a>
                         <p data-i18n="aboutText3">Likumīga un precīza likumu piemērošana</p> 
                     </div>
                 </div>
                 <div class="person">  
-                    <img src="Kaspars.png" alt="Kaspars Troška" class="about-image">
+                    <img src="resource/Kaspars.png" alt="Kaspars Trokša" class="about-image">
                     <div class="caption">  
                         <h3>Kaspars Trokša</h3>  
                         <a href="mailto:kaspars.troksa@autokadacg.lv" class="contact-info-link">
-                            <img src="email-icon.png" alt="email" class="nav-contact-icon">
+                            <img src="resource/email-icon.png" alt="email" class="nav-contact-icon">
                             kaspars.troksa@autokadacg.lv
                         </a>
                         <a href="tel:+371 29495198" class="contact-info-link">
-                            <img src="phone-call-icon.png" alt="phone" class="nav-contact-icon">
+                            <img src="resource/phone-call-icon.png" alt="phone" class="nav-contact-icon">
                             +371 29495198
                         </a>
                         <p data-i18n="aboutText4">Efektīva iepirkumu procedūra un veiksmīga sadarbība</p>
@@ -95,7 +99,7 @@
             <div class="service-grid">
                 <div class="service">
                     <a class="service-img">
-                        <img src="Procuration-services.png" >
+                        <img src="resource/Procuration-services.png" >
                     </a>
                     <h3 data-i18n="serviceText2">Prokūras pakalpojumi</h3>
                     <p data-i18n="serviceText3">Nodrošinām prokūras pakalpojumus, kas ietver gan iznomāšanu, gan izīrēšanu. 
@@ -104,7 +108,7 @@
                 </div>
                 <div class="service">
                     <a class="service-img">
-                        <img src="Development-of-real-estate-projects.png" >
+                        <img src="resource/Development-of-real-estate-projects.png" >
                     </a>
                     <h3 data-i18n="serviceText4">Nekustamo īpašumu projektu attīstība</h3>
                     <p data-i18n="serviceText5">Piedalāmies nekustamo īpašumu projektu attīstībā no iepirkumu procesa līdz uzraudzībai.
@@ -112,7 +116,7 @@
                 </div>
                 <div class="service">
                     <a class="service-img">
-                        <img src="Participating-in-auctions.png" >
+                        <img src="resource/Participating-in-auctions.png" >
                     </a>
                     <h3 data-i18n="serviceText6">Piedalīšanās maksātnespējīgu subjektu mantas izsolēs ārpus ES</h3>
                     <p data-i18n="serviceText7">Piedalāmies maksātnespējīgu subjektu mantas izsolēs ārpus ES un nodrošinām 
@@ -121,7 +125,7 @@
                 </div>
                 <div class="service">
                     <a class="service-img">
-                        <img src="Legal-services.png" >
+                        <img src="resource/Legal-services.png" >
                     </a>
                     <h3 data-i18n="serviceText8">Juridiskie pakalpojumi</h3>
                     <p data-i18n="serviceText9">Sniedzam plaša spektra juridiskos pakalpojumus, kas ietver konsultācijas,
@@ -193,7 +197,7 @@
             heroText2: 'Our mission is your success',
             heroButton: 'Contact us!',
             aboutText1: 'Our Contacts',
-            aboutText2: 'We are a team of experienced and dedicated lawyers committed to providing our clients with top-quality legal services. We have an in-depth understanding of legislation and a proven track record of success in various legal matters.',
+            aboutText2: 'We are a team of experienced and dedicated lawyers committed to provide our clients with top-quality legal services. We have an in-depth understanding of legislation and a proven track record of success in various legal matters.',
             aboutText3: 'Lawful and accurate application of laws',
             aboutText4: 'Efficient procurement process and successful cooperation',
             serviceText1: 'Our Offered Services',
@@ -282,15 +286,42 @@
 
     translatePage('lv');
 
+    // function toggleMenu() {
+    //     const menuToggle = document.querySelector('.menu-toggle');
+
+    //     menuToggle.classList.toggle('active');
+
+    //     document.addEventListener('click', function(event) {
+    //         event.target.classList.add('active');
+    //     });
+    // }
+
     function toggleMenu() {
-        const menuToggle = document.querySelector('.menu-toggle');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuFields = document.querySelector('.menu-fields');
 
-        menuToggle.classList.toggle('active');
+    // Toggle the 'active' class
+    menuToggle.classList.toggle('active');
 
-        document.addEventListener('click', function(event) {
-            event.target.classList.add('active');
-        });
+    // Check if the menu is active and update its visibility
+    if (menuToggle.classList.contains('active')) {
+        menuFields.style.display = 'block';
+    } else {
+        menuFields.style.display = 'none';
     }
+}
+
+// Prevent closing when clicking inside the menu
+document.addEventListener('click', function(event) {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuFields = document.querySelector('.menu-fields');
+
+    if (!menuToggle.contains(event.target) && !menuFields.contains(event.target)) {
+        menuFields.style.display = 'none';
+        menuToggle.classList.remove('active');
+    }
+});
+
     </script>
 </body>
 </html>
