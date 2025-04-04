@@ -108,15 +108,17 @@ section {
 .consult-btn-ru:hover {
     background-color: #e0482d;
 }
-s
+
+.visible-options{
+    display: flex;
+    flex-direction: column;
+}
+
 .language-options {
-    /* display: flex;
-    flex-direction: row;
-    padding-left: 15%; */
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Centers items horizontally */
-    align-items: center; /* Centers items vertically */
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -376,7 +378,7 @@ text-decoration: none;
 }
 
 footer {
-    background: linear-gradient( #f0f0f0);
+    background: #001d7c;
     color: #fff;
     font-weight: bold;
     text-align: center;

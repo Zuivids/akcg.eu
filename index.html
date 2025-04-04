@@ -138,7 +138,7 @@
         <section id="contact">
             <h2 data-i18n="contactText1">Sazinies ar mums</h2>
             <div class="contact-div">
-                <form action="https://formsubmit.co/martins.zaimis@gmail.com" method="POST">
+                <form action="https://formsubmit.co/ainarsstrakis@inbox.lv" method="POST">
                     <input data-i18n="contactText2" type="text" placeholder ="Vārds *" class="text" name="name" required>
                     <input  data-i18n="contactText3" type="email" placeholder="E-pasts *" class="text" name="email" required>
                     <input  data-i18n="contactText4" type="phone" placeholder="Telefons *" class="text" name="phone" required>
@@ -286,24 +286,12 @@
 
     translatePage('lv');
 
-    // function toggleMenu() {
-    //     const menuToggle = document.querySelector('.menu-toggle');
-
-    //     menuToggle.classList.toggle('active');
-
-    //     document.addEventListener('click', function(event) {
-    //         event.target.classList.add('active');
-    //     });
-    // }
-
     function toggleMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
     const menuFields = document.querySelector('.menu-fields');
 
-    // Toggle the 'active' class
     menuToggle.classList.toggle('active');
 
-    // Check if the menu is active and update its visibility
     if (menuToggle.classList.contains('active')) {
         menuFields.style.display = 'block';
     } else {
@@ -311,7 +299,6 @@
     }
 }
 
-// Prevent closing when clicking inside the menu
 document.addEventListener('click', function(event) {
     const menuToggle = document.querySelector('.menu-toggle');
     const menuFields = document.querySelector('.menu-fields');
